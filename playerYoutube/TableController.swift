@@ -13,6 +13,7 @@ class TableController: UIViewController, UITableViewDelegate, UITableViewDataSou
     @IBOutlet weak var tableViewController: UITableView!
     
     var musics = [Music]()
+    let identifierCell = "MusicCell"
     override func viewDidLoad() {
         super.viewDidLoad()
         tableViewController.delegate = self
@@ -24,7 +25,18 @@ class TableController: UIViewController, UITableViewDelegate, UITableViewDataSou
         return musics.count
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 170
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let music = musics[indexPath.row]
+        
+        if let cell = tableView.dequeueReusableCell(withIdentifier: identifierCell) as? MusicCell {
+            cell.setupCell(music: music)
+            return cell
+        }
+        
         return UITableViewCell()
     }
     
@@ -45,8 +57,8 @@ class TableController: UIViewController, UITableViewDelegate, UITableViewDataSou
         let precieux = Music(artist: "Soprano", title: "Mon précieux", code: "OVmfGb8XKSg")
         musics.append(precieux)
         
-        let precieux = Music(artist: "La Casa de Papel", title: "My Life Is Going On", code: "F1oHBcTdKL4&list=PLkLimRXN6NKyOOVAqgfHWns1ICNiGXgOd")
-        musics.append(precieux)
+        let casa = Music(artist: "La Casa de Papel", title: "My Life Is Going On", code: "F1oHBcTdKL4&list=PLkLimRXN6NKyOOVAqgfHWns1ICNiGXgOd")
+        musics.append(casa)
         
         tableViewController.reloadData()
         

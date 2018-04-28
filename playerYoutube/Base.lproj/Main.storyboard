@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -21,6 +22,43 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Due-ta-41M">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MusicCell" rowHeight="167" id="Tr9-gs-p81" customClass="MusicCell" customModule="playerYoutube" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="167"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Tr9-gs-p81" id="xUK-X1-XzD">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="166.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="vaL-7w-w3D">
+                                                    <rect key="frame" x="23" y="8" width="150" height="150"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="150" id="D0g-Hw-xqZ"/>
+                                                        <constraint firstAttribute="width" constant="150" id="Tof-uD-lzc"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vj6-iS-2rj">
+                                                    <rect key="frame" x="181" y="5" width="194" height="156.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="vaL-7w-w3D" firstAttribute="centerY" secondItem="xUK-X1-XzD" secondAttribute="centerY" id="6zt-dU-J1d"/>
+                                                <constraint firstItem="vj6-iS-2rj" firstAttribute="top" secondItem="xUK-X1-XzD" secondAttribute="top" constant="5" id="AId-Zr-GkN"/>
+                                                <constraint firstAttribute="trailing" secondItem="vj6-iS-2rj" secondAttribute="trailing" id="K02-R3-nOJ"/>
+                                                <constraint firstItem="vaL-7w-w3D" firstAttribute="leading" secondItem="xUK-X1-XzD" secondAttribute="leadingMargin" constant="8" id="Moo-jh-Pbt"/>
+                                                <constraint firstItem="vj6-iS-2rj" firstAttribute="leading" secondItem="vaL-7w-w3D" secondAttribute="trailing" constant="8" id="O1L-ZO-6EE"/>
+                                                <constraint firstAttribute="bottom" secondItem="vj6-iS-2rj" secondAttribute="bottom" constant="5" id="zq0-df-LC0"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="desc" destination="vj6-iS-2rj" id="Yiv-ug-5hR"/>
+                                            <outlet property="thumbr" destination="vaL-7w-w3D" id="MwA-6j-2ao"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -60,4 +98,7 @@
             <point key="canvasLocation" x="192.80000000000001" y="-564.46776611694156"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="logo" width="960" height="553"/>
+    </resources>
 </document>

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C1B793142094863E002425B9 /* MusicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B793132094863E002425B9 /* MusicCell.swift */; };
 		C1D90560208C8F240035618F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D9055F208C8F240035618F /* AppDelegate.swift */; };
 		C1D90565208C8F240035618F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1D90563208C8F240035618F /* Main.storyboard */; };
 		C1D90567208C8F240035618F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1D90566208C8F240035618F /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C1B793132094863E002425B9 /* MusicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicCell.swift; sourceTree = "<group>"; };
 		C1D9055C208C8F240035618F /* playerYoutube.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = playerYoutube.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1D9055F208C8F240035618F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C1D90564208C8F240035618F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 				C1D90563208C8F240035618F /* Main.storyboard */,
 				C1D90566208C8F240035618F /* Assets.xcassets */,
 				C1D90568208C8F240035618F /* LaunchScreen.storyboard */,
+				C1B793132094863E002425B9 /* MusicCell.swift */,
 				C1D9056B208C8F240035618F /* Info.plist */,
 				C1D90571208CB8BC0035618F /* TableController.swift */,
 				C1D90573208CC05E0035618F /* Music.swift */,
@@ -141,6 +144,7 @@
 				C1D90572208CB8BC0035618F /* TableController.swift in Sources */,
 				C1D90560208C8F240035618F /* AppDelegate.swift in Sources */,
 				C1D90574208CC05E0035618F /* Music.swift in Sources */,
+				C1B793142094863E002425B9 /* MusicCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
