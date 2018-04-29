@@ -7,17 +7,26 @@
 //
 
 import UIKit
+import WebKit
 
 class VideoController: UIViewController {
     
     var music: Music?
     
+    @IBOutlet weak var webView: WKWebView!
     override func viewDidLoad() {
         super.viewDidLoad()
         if music != nil {
-            title = music?.title
+            loadVideo(music: music!)
         }
        view.backgroundColor = UIColor.black
+    }
+    
+    func loadVideo( music: Music) {
+        if let url = URL(string: music.videoUrl){
+            let request = URLRequest(url: url)
+            webView.load(request)
+        }
     }
 
 }
