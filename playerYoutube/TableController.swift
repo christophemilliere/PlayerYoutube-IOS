@@ -14,6 +14,8 @@ class TableController: UIViewController, UITableViewDelegate, UITableViewDataSou
     
     var musics = [Music]()
     let identifierCell = "MusicCell"
+    let idenfifierSegue = "toVideo"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableViewController.delegate = self
@@ -39,6 +41,19 @@ class TableController: UIViewController, UITableViewDelegate, UITableViewDataSou
         }
         
         return UITableViewCell()
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let music = musics[indexPath.row]
+        performSegue(withIdentifier: idenfifierSegue, sender: music)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == idenfifierSegue {
+            if let newController = segue.destination as? VideoController {
+                newController.music = sender as? Music
+            }
+        }
     }
     
     func addMusic () {
