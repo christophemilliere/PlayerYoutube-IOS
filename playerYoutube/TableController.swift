@@ -18,6 +18,7 @@ class TableController: UIViewController, UITableViewDelegate, UITableViewDataSou
         super.viewDidLoad()
         tableViewController.delegate = self
         tableViewController.dataSource = self
+        title = " Les vidéos"
         addMusic()
     }
     
@@ -26,7 +27,7 @@ class TableController: UIViewController, UITableViewDelegate, UITableViewDataSou
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 170
+        return 130
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
